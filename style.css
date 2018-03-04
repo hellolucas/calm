@@ -1,0 +1,150 @@
+/* Resets & base styling ============== */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+  font-size: 100%;
+	vertical-align: baseline;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font: 300 1em 'Baskerville', Times, serif;
+}
+
+/* Content positioning ============== */
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #444444;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(255,255,255, 1);
+  overflow: hidden;
+}
+
+#about.overlay {
+  display: none;
+}
+
+/* Background images ============== */
+
+.video-background {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -100;
+}
+
+/* Content styling ============== */
+
+.intro {
+  font-size: 3em;
+  text-align: center;
+}
+
+#choice ul li {
+  font-size: 3em;
+  text-align: center;
+  padding: 8px;
+}
+
+#about p {
+  margin: 16px;
+  text-align: center;
+  line-height: 130%;
+}
+
+/* Navigation buttons ============== */
+
+.btn-change {
+  display: none;
+}
+
+.btn-about, .btn-return, .btn-change, #about a, #choice li {
+  transition: all .4s;
+}
+
+#choice li {
+  cursor: pointer;
+}
+
+.btn-about, .btn-return, .btn-change {
+  text-align: center;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  color: #444444;
+}
+
+.btn-about:hover, .btn-return:hover, .btn-change:hover, #choice li:hover {
+  color: #000000;
+}
+
+#about a {
+  color: #0267C1;
+}
+
+#about a:hover {
+  color: #02559E;
+}
+
+/* Intro animation ============== */
+
+.intro {
+    -webkit-animation: fadeinout 3s linear forwards;
+    animation: fadeinout 3s linear forwards;
+    opacity: 0;
+}
+
+#choice {
+    -webkit-animation: 5s ease-in 0s normal forwards 1 fadein;
+    -moz-animation: 5s ease-in 0s normal forwards 1 fadein;
+    -o-animation: 5s ease-in 0s normal forwards 1 fadein;
+    animation: 5s ease-in 0s normal forwards 1 fadein;
+}
+
+@keyframes fadein {
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein {
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@keyframes fadeinout {
+  50% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeinout {
+  50% { opacity: 1; }
+}

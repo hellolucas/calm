@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <title>7 Minutes of Zen</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Based on the pomodoro technique, 7 minutes of zen is the break between each work block">
+  <meta name="author" content="Lucas Toledo">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="intro">Calm</div>
+  </div>
+
+  <video autoplay loop id="videoChoice" class="video-background">
+    <source src="video/dog.mp4" type="video/mp4"></source>
+  </video>
+
+  <menu onclick="openChoice()" id="btn-change" class="btn-change">Change</menu> 
+
+
+  <div id="choice" class="overlay fade">
+    <div class="container">
+      <ul onclick="closeChoice()">
+        <li onClick="changevid('video/lake.mp4')">Lakes</li>
+        <li onClick="changevid('video/lake.mp4')">Mountains</li>
+        <li onClick="changevid('video/lake.mp4')">Forest</li>
+        <li onClick="changevid('video/dog.mp4')">Dog Park</li>
+        <li onClick="changevid('video/lake.mp4')">Surf</li>
+      </ul>
+    </div>
+    <menu onclick="openAbout()" class="btn-about">About</menu>
+  </div>
+
+
+  <div id="about" class="overlay">
+    <div class="container">
+      <p>This is a place where you can take a break<br>from work, life or anything you wish.</p>
+      <p>There are no subscribes, purchases or free ebooks here.</p>
+      <p>Made by <a href="http://www.lucastoledo.co" target="_blank">lucastoledo.co</a></p>
+    </div>
+    <menu href="javascript:void(0)" onclick="closeAbout()" class="btn-return">Return</menu>
+  </div>
+
+
+  <script type="text/javascript" src="javascript.js"></script>
+
+</body>
+</html>

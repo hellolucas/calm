@@ -1,0 +1,15 @@
+function loadLake() {
+    document.body.style.background = "url(video/lake.mp4)";
+}
+function loadMountain() {
+    document.body.style.background = "url(video/dog.mp4)";
+}
+function loadForest() {
+    document.body.style.background = "url(video/lake.mp4)";
+}
+function loadPark() {
+    document.body.style.background = "url(video/dog.mp4)";
+}
+function loadSurf() {
+    document.body.style.background = "url(video/lake.mp4)";
+}
